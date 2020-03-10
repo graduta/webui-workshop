@@ -1,0 +1,19 @@
+{
+  "name": "webui-workshop",
+  "version": "1.0.0",
+  "description": "Project template for WebUI-Workshop 2020",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graduta/webui-workshop.git"
+  },
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/graduta/webui-workshop#readme",
+  "dependencies": {
+    "@aliceo2/web-ui": "1.9.2"
+  },
+  "devDependencies": {},
+  "main": "index.js"
+}

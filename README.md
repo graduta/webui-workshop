@@ -12,11 +12,11 @@
 
 The purpose of this repository is to provide training material and step by step instructions. The workshop will be split in 2 categories (Backend & Frontend) over the course of 2 days. 
 
-At the end of the workshop we would have successfully build a web project based on @aliceo2/web-ui.
+At the end of the workshop we would have successfully build a web project based on [@aliceo2/web-ui](https://github.com/AliceO2Group/WebUi).
 
 # Local Setup
 
-Local Setup needs to be completed by the attendees before the start of the workshop.
+Needs to be completed by the attendees before the start of the workshop.
 
 ### NodeJS & NPM
 [NodeJS](https://nodejs.org/en/) minimum version `10.13.0`. 

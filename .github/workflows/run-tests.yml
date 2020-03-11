@@ -17,8 +17,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: (npm install )
-      - run: (npm test )
+      - run: (npm install)
+      - run: (cp config-default.js config.js)
+      - run: (npm test)
   coverage:
     name: Tests & coverage on ubuntu-18.04
     runs-on: ubuntu-18.04
@@ -28,5 +29,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: (npm install )
-      - run: (npm run coverage )
+      - run: (npm install)
+      - run: (cp config-default.js config.js)
+      - run: (npm run coverage)

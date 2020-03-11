@@ -7,31 +7,24 @@ import {h, switchCase} from '/js/src/index.js';
  */
 export default (model) => [
   h('.flex-column.absolute-fill', [
-    header(model),
-    content(model)
+    header(),
+    content()
   ])
 ];
 
 /**
- * Top header depending on the query string handler by router model
+ * Top header of the page
  * @param {object} model
  * @return {vnode}
  */
-const header = (model) => h('', [
-  switchCase(model.router.params.page, {
-    home: () => h('.w-100.bg-white.flex-row.p2.shadow-level2.level2', {
-      style: 'display: flex; justify-content: center'
-    }, 'Welcome to your home page')
-  })(model)
-]);
+const header = () =>
+  h('.p2.shadow-level2.level2', {
+    style: 'display: flex; justify-content: center'
+  }, 'Welcome to your home page');
 
 /**
- * Page content depending on the query string handler by router model
+ * Page content
  * @param {object} model
  * @return {vnode}
  */
-const content = (model) => [
-  switchCase(model.router.params.page, {
-    home: () => h('', 'Add your content here')
-  })(model)
-];
+const content = () => h('', 'Add your content here');

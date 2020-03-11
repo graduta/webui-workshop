@@ -1,5 +1,5 @@
-# Workshop: Back-end (30 mins)
-- [Workshop: Back-end (30 mins)](#workshop-back-end-30-mins)
+# Workshop: Back-end
+- [Workshop: Back-end](#workshop-back-end)
   - [Configure nodemon](#configure-nodemon)
   - [Add HTTP Requests](#add-http-requests)
   - [ConsulConnector.js](#consulconnectorjs)

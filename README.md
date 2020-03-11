@@ -5,7 +5,7 @@
 - [Local Setup](#local-setup)
     - [NodeJS & NPM](#nodejs--npm)
     - [IDE](#ide)
-- [Building a project with WebUI - Framework](#building-a-project-with-webui---framework)
+- [Build a project with WebUI - Framework](#build-a-project-with-webui---framework)
   - [1. Intro](#1-intro)
   - [2. Setting up the project template locally](#2-setting-up-the-project-template-locally)
   - [3. Front-End Exercises](#3-front-end-exercises)
@@ -31,7 +31,7 @@ Check installation was successful:
 ### IDE
 Install an editor of your choice. For this workshop, presenters will be using [Visual Studio Code](https://code.visualstudio.com).
 
-# Building a project with WebUI - Framework
+# Build a project with WebUI - Framework
 
 ## 1. Intro
 The next generation of AliceO2 applications will be built as web projects based on a common UI Framework [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui)

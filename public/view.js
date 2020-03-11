@@ -8,7 +8,7 @@ import aboutContent from './about/aboutPage.js';
  */
 export default (model) => [
   h('.flex-column.absolute-fill', [
-    header(model.router.params.page),
+    header(model),
     content(model)
   ])
 ];
@@ -18,11 +18,11 @@ export default (model) => [
  * @param {object} model
  * @return {vnode}
  */
-const header = (page) =>
+const header = (model) =>
   h('.p2.shadow-level2.level2', {
     style: 'display: flex; justify-content: center',
     class: 'success'
-  }, `Welcome to your ${page} page`);
+  }, `Welcome to your ${model.router.params.page} page. Your lucky number is: ${model.random}`);
 
 /**
  * Page content

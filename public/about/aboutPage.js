@@ -3,7 +3,12 @@ import {h, iconHome, iconDataTransferDownload} from '/js/src/index.js';
 export default content = (model) =>
   h('.w-100', [
     createButtonGroup(model),
-    createTable(model.about.data)
+    model.about.data.match({
+      NotAsked: () => h('.warning', 'Data? What Data?'),
+      Loading: () => h('', 'Loading'),
+      Success: (data) => createTable(data),
+      Failure: (error) => h('.danger', error),
+    })
   ]);
 
 /**

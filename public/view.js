@@ -1,5 +1,6 @@
 import {h, switchCase} from '/js/src/index.js';
-
+import homeContent from './home/homePage.js';
+import aboutContent from './about/aboutPage.js';
 /**
  * Main view layout
  * @param {object} model - representing current application state
@@ -7,8 +8,8 @@ import {h, switchCase} from '/js/src/index.js';
  */
 export default (model) => [
   h('.flex-column.absolute-fill', [
-    header(),
-    content()
+    header(model.router.params.page),
+    content(model)
   ])
 ];
 
@@ -17,14 +18,19 @@ export default (model) => [
  * @param {object} model
  * @return {vnode}
  */
-const header = () =>
+const header = (page) =>
   h('.p2.shadow-level2.level2', {
-    style: 'display: flex; justify-content: center'
-  }, 'Welcome to your home page');
+    style: 'display: flex; justify-content: center',
+    class: 'success'
+  }, `Welcome to your ${page} page`);
 
 /**
  * Page content
  * @param {object} model
  * @return {vnode}
  */
-const content = () => h('', 'Add your content here');
+const content = (model) =>
+  switchCase(model.router.params.page, {
+    home: homeContent,
+    about: aboutContent
+  })(model);

@@ -11,6 +11,7 @@
   - [3. Front-End Exercises](#3-front-end-exercises)
   - [4. Back-End Exercises](#4-back-end-exercises)
   - [5. Development Process](#5-development-process)
+- [References](#references)
 
 # Overview
 
@@ -20,7 +21,7 @@ At the end of the workshop we would have successfully built a web project based 
 
 # Local Setup
 
-### NodeJS & NPM 
+### NodeJS & NPM
 [NodeJS](https://nodejs.org/en/) minimum version `10.13.0`. </br>
 Downloading the package from nodejs website will install both NodeJS and NPM.
 
@@ -42,7 +43,7 @@ In order to do that, it was decided to make use of Hyperscript and its capabilit
 
 *  Examples on how to build [Components](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/components.md).
 
-* [Scaling your application](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/components.md)
+* [Scaling your application](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/scale-app.md)
 
 * Set of [CSS](https://aliceo2group.github.io/WebUi/Framework/docs/reference/frontend-css.html) Components built in accordance with ALICE Standards. 
 
@@ -60,3 +61,10 @@ Now you should have a running HTTP server hosted on `localhost:8080`.
 ## 3. [Front-End Exercises](docs/WORKSHOP_FRONTEND.md)
 ## 4. [Back-End Exercises](docs/WORKSHOP_BACKEND.md)
 ## 5. [Development Process](docs/DEVELOPMENT_PROCESS.md)
+
+# References
+`AliceO2/WebUI-Framework`
+* NPM module - [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui)
+* GitHub Repository - [WebUI](https://github.com/AliceO2Group/WebUi)
+* [Documentation](https://github.com/AliceO2Group/WebUi/tree/dev/Framework)
+* JIRA Board - [OGUI](https://alice.its.cern.ch/jira/projects/OGUI/summary)

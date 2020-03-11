@@ -20,7 +20,7 @@ At the end of the workshop we would have successfully built a web project based 
 
 # Local Setup
 
-### NodeJS & NPM
+### NodeJS & NPM 
 [NodeJS](https://nodejs.org/en/) minimum version `10.13.0`. </br>
 Downloading the package from nodejs website will install both NodeJS and NPM.
 

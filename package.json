@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon --watch index.js --watch lib --watch config.js index.js",
-    "test": "mocha --exit test/**/mocha-*"
+    "test": "mocha --exit test/**/mocha-*",
+    "coverage": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "mocha": "^7.1.0",
     "nodemon": "^2.0.2",
+    "nyc": "^15.0.0",
     "puppeteer": "^2.1.1",
     "sinon": "^9.0.1"
   },

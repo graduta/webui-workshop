@@ -47,7 +47,6 @@
 * Add a test in which request for data is mocked to return an error
   * Check that page displayed the error state given in `RemoteData`
 
----
 ## Code Coverage
 * Add a new dependency to your `package.json` file: `"nyc": "^14.1.1"`
 * Run `npm install`
@@ -57,7 +56,6 @@
 ```
 * Run command as: `npm run coverage`
 
----
 ## GitHub Actions
 * Create 2 new directories at the root of your project: `.github/workflows`
 * Create a new file, `.gh-action.yml`, in the newly created directory `.github/workflows`
@@ -71,3 +69,4 @@
 ## Contributing to AliceO2Group/WebUI
 * In order to make contributions to the framework, on top of an admin review, we have putin place multiple automated checks such as ESLint and minimum CodeCoverage for the newly added changes;
 * More details can be found here: [Development Environment](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/devel.md#development-environment)
+  

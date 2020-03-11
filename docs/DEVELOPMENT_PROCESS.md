@@ -5,6 +5,7 @@
     - [Create a test file](#create-a-test-file)
     - [Configure tests](#configure-tests)
   - [Integration Tests](#integration-tests)
+    - [Install dependencies](#install-dependencies)
     - [Create a test file](#create-a-test-file-1)
     - [Add checks for your UI components](#add-checks-for-your-ui-components)
   - [Code Coverage](#code-coverage)
@@ -15,23 +16,37 @@
 ### Create a service class
 * Create a new folder `lib` at the root of your project
 * In `lib`, create a new file `ApplicationService.js`
-* Within the newly created file, create a class and add a method which will return the JSON with data about the application from `api.js`
-* Update `api.js` to make use of this new class and method
+* Within the newly created file, create a class and add a method which will return the JSON with data about the application from `index.js`
+* Update `index.js` to make use of this new class and method
   
 ### Create a test file
 * Create a new folder `test` at the root of your project
-* Create a new file `mocha-control-service.js`
+* Create a new file `mocha-application-service.js`
 * Write a test which checks correct initialization of the service
-* Write a test which checks the method added returns the expected JSON
+* Write a test which checks the method added, returns the expected JSON
   
 ### Configure tests
 * Add command for running mocha tests in your `package.json` file
 ```
 "test": "mocha --exit test/**/mocha-*"
 ```
+* Install `mocha` as a dev dependency:
+```
+npm install --save-dev mocha
+```
+* Install `sinon` as a dev dependency:
+```
+npm install --save-dev sinon
+```
+* Import both new dependencies into your test file;
 * Run tests via: `npm run test`
 
 ## Integration Tests
+### Install dependencies
+* Install puppeteer:
+```
+npm install --save-dev puppeteer
+```
 ### Create a test file
 * Create a new file `mocha-index.js` within your test directory
 * In the `before` step:
@@ -44,19 +59,19 @@
   * Buttons were successfully created
   * Buttons have as `classList` the elements you set
   * Buttons behavior works as expected
-* Add a test in which request for data is mocked to return an error
-  * Check that page displayed the error state given in `RemoteData`
 
 ## Code Coverage
-* Add a new dependency to your `package.json` file: `"nyc": "^14.1.1"`
-* Run `npm install`
+* Install [nyc](https://istanbul.js.org/) as a dependency
+```
+npm install --save-dev nyc
+```
 * Add a new command in your `package.json` file: 
 ```
-"coverage": "nyc --reporter=lcov npm run mocha"
+"coverage": "nyc npm run test"
 ```
 * Run command as: `npm run coverage`
 
-## GitHub Actions
+## [GitHub Actions](https://help.github.com/en/actions)
 * Create 2 new directories at the root of your project: `.github/workflows`
 * Create a new file, `.gh-action.yml`, in the newly created directory `.github/workflows`
 * Add a criteria for workflow to be triggered on each push to your branch

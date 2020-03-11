@@ -16,7 +16,7 @@
 
 The purpose of this repository is to provide training material and step by step instructions. The workshop will be split in 2 categories (Backend & Frontend) over the course of 2 days. 
 
-At the end of the workshop we would have successfully build a web project based on [@aliceo2/web-ui](https://github.com/AliceO2Group/WebUi).
+At the end of the workshop we would have successfully built a web project based on [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui).
 
 # Local Setup
 
@@ -53,7 +53,7 @@ In order to do that, it was decided to make use of Hyperscript and its capabilit
 3. Create your own branch: `git checkout -b <your-branch-name>`
 4. Install its dependencies via: `npm install`
 5. Copy the configuration file: `cp config-default.js config.js`
-6. Run: `nodejs index.js`
+6. Run: `node index.js`
 
 Now you should have a running HTTP server hosted on `localhost:8080`.
 

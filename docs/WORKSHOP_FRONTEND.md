@@ -53,8 +53,10 @@ In this chapter we will tackle how to create various components on the newly set
 * Class should have a constructor
   * Constructor should initialize super() and userName
 * Write a `getUserName` method which will return the userName and will be used by the "User" button
-
-* Add a label component in the home page which should use `getUserName` method on pressing the button with this purpose
+* Write a `setUserName` method which will set the user to your name
+* 
+* Add a label component in the home page which should use `getUserName` method to display the user.
+* Use the `setUserName` method to change the label to your username when pressing the user button
 * Press button. Was the label updated?
 * Observable model - missing `this.notify()`
 
@@ -67,7 +69,7 @@ In this chapter we will tackle how to create various components on the newly set
   * Add a method to `getDetails` which will set the JSON variable and increment the requestedTimes variable
 
 ##  Build a table in `aboutPage.js`
-* The table should be filled with data from the `getDetails` method implemented earlier
+* The table should be filled with data from the `getDetails` method implemented earlier which is being called by the button with the same purpose
 
 ## Link pages between them
 Make use of [QueryRouter](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/front-router.md)

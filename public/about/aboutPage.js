@@ -1,6 +1,6 @@
 import {h, iconHome, iconDataTransferDownload} from '/js/src/index.js';
 
-export default content = (model) =>
+export default (model) =>
   h('.w-100', [
     createButtonGroup(model),
     model.about.data.match({

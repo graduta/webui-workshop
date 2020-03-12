@@ -12,7 +12,7 @@
   "license": "GPL-3.0",
   "homepage": "https://github.com/graduta/webui-workshop#readme",
   "dependencies": {
-    "@aliceo2/web-ui": "1.9.2"
+    "@aliceo2/web-ui": "1.10.2"
   },
   "devDependencies": {},
   "main": "index.js"

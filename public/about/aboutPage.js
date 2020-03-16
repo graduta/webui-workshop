@@ -1,5 +1,4 @@
 import {h, iconHome, iconDataTransferDownload} from '/js/src/index.js';
-import {createBrowserFetcher} from 'puppeteer';
 
 export default (model) =>
   h('.w-100', [

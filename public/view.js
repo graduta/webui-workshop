@@ -25,7 +25,7 @@ const header = (model) =>
   }, `Welcome to your ${model.router.params.page} page. Your lucky number is: ${model.random}`);
 
 /**
- * Page content
+ * Page content based on the location of the page
  * @param {object} model
  * @return {vnode}
  */

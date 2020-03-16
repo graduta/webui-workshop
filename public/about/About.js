@@ -1,7 +1,7 @@
 import {Observable, RemoteData} from '/js/src/index.js';
 
 /**
- * Model representing About
+ * Model representing handlers for the aboutPage.js
  */
 export default class About extends Observable {
   /**
@@ -10,18 +10,18 @@ export default class About extends Observable {
   constructor(model) {
     super();
     this.model = model;
+
     this.data = RemoteData.notAsked();
     this.requestedTimes = 0;
   }
 
   /**
-   * Method to make an HTTP Request for data
+   * Method to make an HTTP GET Request
    * @return {JSON}
    */
   async getData() {
     this.data = RemoteData.loading();
     this.requestedTimes++;
-
     this.notify();
 
     const {result, ok} = await this.model.loader.get(`/api/getData`);

@@ -1,4 +1,5 @@
 import {h, iconHome, iconDataTransferDownload} from '/js/src/index.js';
+import {createBrowserFetcher} from 'puppeteer';
 
 export default (model) =>
   h('.w-100', [
@@ -12,7 +13,7 @@ export default (model) =>
   ]);
 
 /**
- * Method to create a button group
+ * Method to create a group of buttons
  * * button to navigate to home page
  * * button to get data about the project
  * @param {Object} model
@@ -39,10 +40,16 @@ const createButtonGroup = (model) =>
  */
 const createTable = (data) =>
   h('table.table.shadow-level2', {style: 'white-space: pre-wrap;'}, [
-    h('tbody',
-      Object.keys(data).map((columnName) => h('tr', [
-        h('th', columnName),
-        h('td', data[columnName])
-      ]))
-    ),
+    h('tbody', Object.keys(data).map((key) => createRow(key, data[key])))
+  ]);
+
+/**
+ * Method to build a row based on key and value from data
+ * @param {string} columnName 
+ * @param {JSON} data 
+ */
+const createRow = (rowName, value) =>
+  h('tr', [
+    h('th', rowName),
+    h('td', value)
   ]);

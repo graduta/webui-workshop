@@ -1,7 +1,7 @@
 import {Observable} from '/js/src/index.js';
 
 /**
- * Model representing Home
+ * Model representing handlers for the homePage.js
  */
 export default class Home extends Observable {
   /**
@@ -10,6 +10,7 @@ export default class Home extends Observable {
   constructor(model) {
     super();
     this.model = model;
+
     this.userName = '';
   }
 

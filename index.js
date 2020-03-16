@@ -6,7 +6,7 @@ const {HttpServer, WebSocket, WebSocketMessage} = require('@aliceo2/web-ui');
 
 const application = new ApplicationService();
 
-const http = new HttpServer(config.http, config.jwt, config.oAuth);
+const http = new HttpServer(config.http);
 http.addStaticPath(path.join(__dirname, 'public'));
 
 http.get('/getData', (req, res) => application.getData(req, res));

@@ -64,6 +64,7 @@ Now you should have a running HTTP server hosted on `localhost:8080`.
 
 # References
 * Solution on branch `frontend-backend-development`: https://github.com/graduta/webui-workshop/tree/solution/frontend-backend-development
+
 `AliceO2/WebUI-Framework`
 * NPM module - [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui)
 * GitHub Repository - [WebUI](https://github.com/AliceO2Group/WebUi)

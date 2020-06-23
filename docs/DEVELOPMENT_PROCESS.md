@@ -26,7 +26,7 @@
 * Write a test which checks the method added, returns the expected JSON
   
 ### Configure tests
-* Add command for running mocha tests in your `package.json` file
+* Add command for running mocha tests in your `package.json` file under the key `scripts`
 ```
 "test": "mocha --exit test/**/mocha-*"
 ```
@@ -65,7 +65,7 @@ npm install --save-dev puppeteer
 ```
 npm install --save-dev nyc
 ```
-* Add a new command in your `package.json` file: 
+* Add a new command in your `package.json` file under the key `scripts`: 
 ```
 "coverage": "nyc npm run test"
 ```

@@ -52,7 +52,7 @@ In order to do that, it was decided to make use of Hyperscript and its capabilit
 1. Clone the repository via HTTPS/SSH (https://github.com/graduta/webui-workshop)
 2. Go to the directory of the project: `cd webui-workshop`
 3. Create your own branch: `git checkout -b <your-branch-name>`
-4. Install its dependencies via: `npm install`
+4. Install its dependencies via: `npm ci`
 5. Copy the configuration file: `cp config-default.js config.js`
 6. Run: `node index.js`
 

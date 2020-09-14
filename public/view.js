@@ -8,8 +8,8 @@ import aboutContent from './about/aboutPage.js';
  */
 export default (model) => [
   h('.flex-column.absolute-fill', [
-    header(model),
-    content(model)
+    header(),
+    content()
   ])
 ];
 

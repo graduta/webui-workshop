@@ -14,7 +14,7 @@ export default class Model extends Observable {
     super();
 
     this.session = sessionService.get();
-    this.session.personid = parseInt(this.session.personid, 10); // cast, sessionService has only strings
+    this.session.personid = parseInt(this.session.personid, 10);
 
     // Setup router
     this.router = new QueryRouter();

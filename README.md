@@ -22,7 +22,7 @@ At the end of the workshop we would have successfully built a web project based 
 # Local Setup
 
 ### NodeJS & NPM
-[NodeJS](https://nodejs.org/en/) minimum version `10.13.0`. </br>
+[NodeJS](https://nodejs.org/en/) required version `14`. </br>
 Downloading the package from nodejs website will install both NodeJS and NPM.
 
 Check installation was successful: 
@@ -52,7 +52,7 @@ In order to do that, it was decided to make use of Hyperscript and its capabilit
 1. Clone the repository via HTTPS/SSH (https://github.com/graduta/webui-workshop)
 2. Go to the directory of the project: `cd webui-workshop`
 3. Create your own branch: `git checkout -b <your-branch-name>`
-4. Install its dependencies via: `npm ci`
+4. Install the project dependencies via: `npm ci`
 5. Copy the configuration file: `cp config-default.js config.js`
 6. Run: `node index.js`
 

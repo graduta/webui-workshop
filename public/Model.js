@@ -1,4 +1,6 @@
 import {Observable, QueryRouter, Loader, sessionService} from '/js/src/index.js';
+import {Home} from './home/Home.js'
+import {About} from './about/About.js'
 
 /**
  * Root of model tree
@@ -23,6 +25,12 @@ export default class Model extends Observable {
     this.router.bubbleTo(this);
 
     this.handleLocationChange(); // Init first page
+
+    this.home = new Home(this, this.session.personid)
+    this.home.bubbleTo(this);
+
+    this.about = new About(this);
+    this.about.bubbleTo(this);
   }
 
   /**
@@ -31,6 +39,8 @@ export default class Model extends Observable {
   handleLocationChange() {
     switch (this.router.params.page) {
       case 'home':
+        break;
+      case 'about':
         break;
       default:
         this.router.go('?page=home');

@@ -31,5 +31,5 @@ const header = (model) =>
  */
 const content = (model) => switchCase(model.router.params.page, {
   home: () => homeContent(model),
-  about: () => aboutContent(model.about),
+  about: () => aboutContent(model),
 },  () => h('p', 'print default'))();

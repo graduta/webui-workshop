@@ -2,7 +2,7 @@ import {h} from '/js/src/index.js';
 import {iconPerson} from '/js/src/icons.js'
 
 const aboutTable = (model) => {
-  const details = model.getDetails();
+  const details = model.about.getDetails();
   return h(
     'table',
     [
@@ -12,20 +12,16 @@ const aboutTable = (model) => {
   )
 }
 
-const homeButtonOnClick = () => {
-  console.log("Takes the user back to home")
-  model.router.go('?page=home');
-}
-
-const homeButton = h(
-  'button', {
-    title: "Home",
-    onclick: homeButtonOnClick
+const homeLink = (model) => h('', 
+  h('a', {
+    onclick: (e) => {
+      model.router.handleLinkEvent(e);
+    }, href: '?page=home'
   }, 
-  iconPerson()
+  h('li', iconPerson()))
 )
 
 export const aboutContent = (model) => [
-  homeButton,
+  homeLink(model),
   aboutTable(model)
 ]

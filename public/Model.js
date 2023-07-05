@@ -26,7 +26,7 @@ export default class Model extends Observable {
 
     this.handleLocationChange(); // Init first page
 
-    this.home = new Home(this, this.session.personid)
+    this.home = new Home(this, this.session.username)
     this.home.bubbleTo(this);
 
     this.about = new About(this);

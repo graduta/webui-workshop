@@ -2,7 +2,7 @@ import {h} from '/js/src/index.js';
 import {iconPerson} from '/js/src/icons.js'
 
 const aboutTable = (model) => {
-  const details = model.about.getDetails();
+  const details = model.getDetails();
   return h(
     'table',
     [
@@ -12,16 +12,16 @@ const aboutTable = (model) => {
   )
 }
 
-const homeLink = (model) => h('', 
+const homeLink = (router) => h('', 
   h('a', {
     onclick: (e) => {
-      model.router.handleLinkEvent(e);
+      router.handleLinkEvent(e);
     }, href: '?page=home'
   }, 
   h('li', iconPerson()))
 )
 
-export const aboutContent = (model) => [
-  homeLink(model),
+export const aboutContent = (model, router) => [
+  homeLink(router),
   aboutTable(model)
 ]

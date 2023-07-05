@@ -30,6 +30,6 @@ const header = (model) =>
  * @return {vnode}
  */
 const content = (model) => switchCase(model.router.params.page, {
-  home: () => homeContent(model),
-  about: () => aboutContent(model),
+  home: () => homeContent(model.home, model.router),
+  about: () => aboutContent(model.about, model.router),
 },  () => h('p', 'print default'))();

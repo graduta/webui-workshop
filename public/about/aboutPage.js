@@ -2,7 +2,7 @@ import {h} from '/js/src/index.js';
 import {iconPerson} from '/js/src/icons.js'
 
 const dataNotAskedWarning = () => h('p', "Click to fetch data.")
-const dataLoadingWarning = () => h('p', "Loading...")
+const dataLoadingWarning = () => h('.loader')
 const dataFailureWarning = (error) => h('p', `${error}`)
 
 const aboutTable = (model) => {

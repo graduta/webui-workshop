@@ -1,5 +1,4 @@
 import {Observable} from '/js/src/index.js';
-import {fetchClient} from '/js/src/index.js';
 import {RemoteData} from '/js/src/index.js';
 
 export class About extends Observable {

@@ -6,7 +6,8 @@ const {HttpServer} = require('@aliceo2/web-ui');
 const http = new HttpServer(config.http, config.jwt, config.oAuth);
 http.addStaticPath(path.join(__dirname, 'public'));
 
-http.get('/data', (req, res) => {
+http.get('/data', async (req, res) => {
+    await new Promise(r => setTimeout(r, 1000));
     const data = {
         name: 'MyWebUI Project',
         version: 0.1,

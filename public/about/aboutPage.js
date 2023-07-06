@@ -1,8 +1,18 @@
 import {h} from '/js/src/index.js';
 import {iconPerson} from '/js/src/icons.js'
 
+const dataNotAskedWarning = () => h('p', "Click to fetch data.")
+const dataLoadingWarning = () => h('p', "Loading...")
+const dataFailureWarning = () => h('p', "Data fetch failed.")
+
 const aboutTable = (model) => {
-  const data = model.getData();
+  const remoteData = model.getData();
+
+  if (remoteData.isNotAsked()) return dataNotAskedWarning();
+  if (remoteData.isLoading()) return dataLoadingWarning();
+  if (remoteData.isFailure()) return dataFailureWarning();
+  
+  const data = remoteData.payload;
   return h(
     'table',
     [
@@ -13,7 +23,10 @@ const aboutTable = (model) => {
 }
 
 const fetchDataButton = (model) => {
-  return h('button', {onclick: () => model.fetchDataFromServer()}, 'Fetch Data')
+  return h('button', {
+    onclick: () => model.fetchDataFromServer(), 
+    disabled: model.getData().isLoading()
+  }, 'Fetch Data')
 }
 
 const homeLink = (router) => h('', 

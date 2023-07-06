@@ -24,15 +24,14 @@ export class About extends Observable {
     async fetchDataFromServer() {
         this.setData(RemoteData.Loading())
 
-        const data = await fetchClient('/api/data')
-            .then(res => res.json());
-        data.requestedTimes = ++this.requestedTimes
-
-        // Fake an error from the server for purpose of demonstration
-        if (this.requestedTimes % 3 == 0) {
-            this.setData(RemoteData.Failure(":("))
+        const {result: data, ok} = await this.model.loader.get('/api/data');
+        if (!ok) {
+            console.log(data);
+            this.setData(RemoteData.Failure(data.message))
             return
         }
+
+        data.requestedTimes = ++this.requestedTimes
 
         this.setData(RemoteData.success(data));
     }

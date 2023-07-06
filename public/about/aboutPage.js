@@ -3,15 +3,15 @@ import {iconPerson} from '/js/src/icons.js'
 
 const dataNotAskedWarning = () => h('p', "Click to fetch data.")
 const dataLoadingWarning = () => h('p', "Loading...")
-const dataFailureWarning = () => h('p', "Data fetch failed.")
+const dataFailureWarning = (error) => h('p', `${error}`)
 
 const aboutTable = (model) => {
   const remoteData = model.getData();
 
   if (remoteData.isNotAsked()) return dataNotAskedWarning();
   if (remoteData.isLoading()) return dataLoadingWarning();
-  if (remoteData.isFailure()) return dataFailureWarning();
-  
+  if (remoteData.isFailure()) return dataFailureWarning(remoteData.payload);
+
   const data = remoteData.payload;
   return h(
     'table',

@@ -13,6 +13,10 @@ export class Home extends Observable {
 
     setUserName(username) {
         this.username = username;
+    }
+
+    saveUserName() {
+        // This could call an api or something!
         this.notify();
     }
 }

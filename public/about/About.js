@@ -1,4 +1,5 @@
 import {Observable} from '/js/src/index.js';
+import {fetchClient} from '/js/src/index.js'
 
 export class About extends Observable {
     constructor(model) {
@@ -8,14 +9,19 @@ export class About extends Observable {
         this.requestedTimes = 0;
     }
 
-    getDetails() {
-        this.data = {
-            field1: "value1", 
-            field2: "value2",
-            requestedTimes: this.requestedTimes
-        }
-        this.requestedTimes++;
-        
+    setData(data) {
+        this.data = data;
+        this.notify();
+    }
+
+    getData() {
         return this.data;
+    }
+
+    async fetchDataFromServer() {
+        const data = await fetchClient('/api/data')
+            .then(res => res.json());
+        this.setData(data)
+        this.requestedTimes++;
     }
 }

@@ -20,9 +20,15 @@ export default (model) => [
  * @return {vnode}
  */
 const header = (model) =>
-  h('.p2.shadow-level2.level2#myheader', {
+  [h('.p2.shadow-level2.level2#myheader', {
     style: 'display: flex; justify-content: center;'
-  }, `Welcome to ${model.router.params.page}`);
+  }, `Welcome to ${model.router.params.page}.`),
+  randomNumberDisplay(model.number)
+];
+
+const randomNumberDisplay = (number) => 
+  h('', `The random number is ${number}`)
+
 
 /**
  * Page content

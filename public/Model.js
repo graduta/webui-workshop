@@ -1,4 +1,4 @@
-import {Observable, QueryRouter, Loader, sessionService} from '/js/src/index.js';
+import {Observable, QueryRouter, Loader, sessionService, WebSocketClient} from '/js/src/index.js';
 import {Home} from './home/Home.js'
 import {About} from './about/About.js'
 
@@ -31,6 +31,16 @@ export default class Model extends Observable {
 
     this.about = new About(this);
     this.about.bubbleTo(this);
+
+    this.ws = new WebSocketClient();
+    this.ws.addListener('authed', () => {
+      console.log('ready, lets send a message');
+      this.ws.sendMessage({command: 'custom-client-event-name', payload: 123});
+    });
+    this.ws.addListener('command', (message) => {
+      this.number = message.payload.num
+      this.notify();
+    });
   }
 
   /**

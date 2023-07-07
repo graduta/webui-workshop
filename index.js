@@ -2,6 +2,7 @@ const path = require('path');
 const config = require('./config.js');
 const random = require('./lib/random.js')
 
+const {WebSocket, WebSocketMessage} = require('@aliceo2/web-ui');
 const {HttpServer} = require('@aliceo2/web-ui');
 
 const http = new HttpServer(config.http, config.jwt, config.oAuth);
@@ -28,3 +29,12 @@ http.get('/data', async (req, res) => {
     res.status(200);
     res.json(data);
 })
+
+const ws = new WebSocket(http);
+const wsTimer = setInterval(() => ws.broadcast(
+    new WebSocketMessage()
+        .setCommand('random-num')
+        .setPayload({num: random.randomIntFromInterval(1, 5)})
+        .setBroadcast()
+    ), 1000   
+);

@@ -1,17 +1,16 @@
 name: 'Test suite'
+on:
   push:
     branches:
       - 'joseph-torsney' # just my branch for now!
-    jobs:
-      unit-tests:
-        runs-on: 'ubuntu-latest'
-        steps:
-          - name: Setup node
-            uses: actions/setup-node@v3
-            with:
-              node-version: 18.16.1
-          - run: (npm install)
-          - run: (cp config-default.js config.js)
-          - run: npm run test
-          # cp config-default.js config.js
-          # run npm test
+jobs:
+  unit-tests:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.1
+      - run: (npm install)
+      - run: (cp config-default.js config.js)
+      - run: npm run test

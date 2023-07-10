@@ -15,7 +15,8 @@
   "homepage": "https://github.com/graduta/webui-workshop#readme",
   "dependencies": {
     "@aliceo2/web-ui": "1.23.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "puppeteer": "^20.8.0"
   },
   "main": "index.js",
   "devDependencies": {

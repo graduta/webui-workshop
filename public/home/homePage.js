@@ -21,7 +21,7 @@ const setUserNameBtn = (model) => h('button', {
   }
 },"Set username")
 
-const aboutLink = (router) => h('', 
+const aboutLink = (router) => h('.btn', 
   h('a', {
     onclick: (e) => {
       router.handleLinkEvent(e);

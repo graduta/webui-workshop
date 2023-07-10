@@ -5,7 +5,11 @@ const {ApplicationService} = require('./lib/ApplicationService.js');
 const {WebSocket, WebSocketMessage} = require('@aliceo2/web-ui');
 const {HttpServer} = require('@aliceo2/web-ui');
 
-const app = new ApplicationService();
+const app = new ApplicationService({
+    name: 'MyWebUI Project',
+    version: 0.1,
+    author: 'Batman'
+});
 
 const http = new HttpServer(config.http, config.jwt, config.oAuth);
 http.addStaticPath(path.join(__dirname, 'public'));

@@ -54,6 +54,8 @@ All applications are built as SPAs (Single Page Applications). A single-page app
 * [Scaling your application](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/scale-app.md)
 * Set of [CSS](https://aliceo2group.github.io/WebUi/Framework/docs/reference/frontend-css.html) Components built in accordance with ALICE Standards. 
 
+Before starting the exercises, fork the repository and clone your fork locally.
+
 ## 1. [Introductory NodeJS Exercises](./docs/INTRODUCTORY_EXERCISES.md)
 ## 2. [Setting up the project template locally](./docs/SETUP_WEBUI_TEMPLATE.md)
 ## 3. [Front-End Exercises](docs/WORKSHOP_FRONTEND.md)

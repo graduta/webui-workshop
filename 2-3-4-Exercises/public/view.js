@@ -1,6 +1,7 @@
 import {h, switchCase} from '/js/src/index.js';
 import homeContent from './home/homePage.js';
 import aboutContent from './about/aboutPage.js';
+
 /**
  * Main view layout
  * @param {object} model - representing current application state

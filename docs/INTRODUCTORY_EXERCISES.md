@@ -1,9 +1,13 @@
 # Introductory NodeJS exercises
 
-### 0. Helpful links
+### 0. Setup and Helpful links
 - https://github.com/AliceO2Group/WebUi/tree/dev/Framework#backend-guide
 - https://expressjs.com/en/api.html#req
 - https://expressjs.com/en/api.html#res
+
+1. Fork the repository and clone your forked version locally.
+2. Go to the directory of the project: `cd webui-workshop/0-Introductory-Exercises`
+3. Install the project dependencies via: `npm ci`. More dependencies will be installed during the exercises
 
 ### 1. Deploy a WebUI HTTP Server
 By making use of `@aliceo2/webui` library, use the provided HTTP server to deploy a:

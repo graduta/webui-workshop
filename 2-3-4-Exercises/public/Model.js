@@ -1,6 +1,6 @@
 import {Observable, QueryRouter, Loader, sessionService, WebSocketClient} from '/js/src/index.js';
-import Home from './home/Home.js';
-import About from './about/About.js';
+import {HomeModel} from './pages/home/HomeModel.js';
+// import About from './pages/about/AboutModel.js';
 
 /**
  * Root of model tree
@@ -24,11 +24,8 @@ export default class Model extends Observable {
     this.loader = new Loader(this);
     this.loader.bubbleTo(this);
 
-    this.home = new Home(this);
-    this.home.bubbleTo(this);
-
-    this.about = new About(this);
-    this.about.bubbleTo(this);
+    this.homeModel = new HomeModel(this);
+    this.homeModel.bubbleTo(this);
 
     // Setup WS connection
     this.ws = new WebSocketClient();
@@ -43,8 +40,6 @@ export default class Model extends Observable {
   handleLocationChange() {
     switch (this.router.params.page) {
       case 'home':
-        break;
-      case 'about':
         break;
       default:
         this.router.go('?page=home');

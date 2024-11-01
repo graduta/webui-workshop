@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/graduta/webui-workshop#readme",
   "dependencies": {
-    "@aliceo2/web-ui": "^2.5.0"
+    "@aliceo2/web-ui": "^2.7.3"
   }
 }

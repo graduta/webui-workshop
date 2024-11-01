@@ -1,6 +1,6 @@
-# WebUI-Workshop 2023
+# WebUI-Workshop 2024
 
-- [WebUI-Workshop 2023](#webui-workshop-2023)
+- [WebUI-Workshop 2024](#webui-workshop-2024)
 - [Overview](#overview)
 - [Tutorials to follow before workshop day](#tutorials-to-follow-before-workshop-day)
 - [Local Setup](#local-setup)
@@ -17,7 +17,7 @@
 
 # Overview
 
-The purpose of this repository is to provide training material and step by step instructions for new joiners that are to work on ALICE GUIs. The workshop will be split in 3 main categories over the course of 2-3 days. It also gives an introduction to all ALICE projects (Bookkeeping, Control, InfoLogger, Quality Control).
+The purpose of this repository is to provide training material and step by step instructions for new joiners that are to work on ALICE GUIs. The workshop will be split in 3 main categories over the course of 2-3 days. It also gives an introduction to all ALICE projects (Bookkeeping, Control, InfoLogger, Quality Control, RCT).
 
 At the end of the workshop the students should have successfully built a web project based on [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui).
 
@@ -29,11 +29,12 @@ The following tutorials are considered to be useful to skim through or complete 
 - Sequalize for Databases: https://sequelize.org/docs/v6/getting-started/
 - MithrilJS: https://mithril.js.org/
 - Docker: https://www.docker.com/101-tutorial/ 
+- CSS Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 # Local Setup
 
 ### NodeJS & NPM
-[NodeJS](https://nodejs.org/en/) required version `18`/ `20`. </br>
+[NodeJS](https://nodejs.org/en/) required version `>=20`. </br>
 Downloading the package from nodejs website will install both NodeJS and NPM.
 
 Check installation was successful: 
@@ -46,9 +47,11 @@ Install an editor of your choice. For this workshop, presenters will be using [V
 # Build a project with WebUI - Framework
 
 ## 0. Intro
-The AliceO2 user applications are built as web projects based on a common UI Framework [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui).
+The AliceO2 user applications are built as web projects based on a common UI Framework [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui) which provides functionality for both front-end and back-end.
 
-All applications are built as SPAs (Single Page Applications). A single-page application is a web application or website that interacts with the web browser by dynamically rewriting the current web page with new data from the web server. In order to do that, it was decided to make use of MithrilJS and its capabilities of building virtual nodes. [MVC](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/template-engine.md)
+All applications are built as SPAs (Single Page Applications). 
+
+A single-page application is a web application or website that interacts with the web browser by dynamically rewriting the current web page with new data from the web server. In order to do that, it was decided to make use of MithrilJS and its capabilities of building virtual nodes. [MVC](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/template-engine.md)
 
 * Examples on how to build [Components](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/components.md).
 * [Scaling your application](https://github.com/AliceO2Group/WebUi/blob/dev/Framework/docs/guide/scale-app.md)

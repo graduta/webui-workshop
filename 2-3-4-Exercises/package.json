@@ -16,7 +16,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@aliceo2/web-ui": "2.5.0"
+    "@aliceo2/web-ui": "2.7.3"
   },
   "devDependencies": {}
 }

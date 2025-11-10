@@ -1,6 +1,6 @@
-# WebUI-Workshop 2024
+# WebUI-Workshop 2025
 
-- [WebUI-Workshop 2024](#webui-workshop-2024)
+- [WebUI-Workshop 2025](#webui-workshop-2025)
 - [Overview](#overview)
 - [Tutorials to follow before workshop day](#tutorials-to-follow-before-workshop-day)
 - [Local Setup](#local-setup)
@@ -18,6 +18,7 @@
 # Overview
 
 The purpose of this repository is to provide training material and step by step instructions for new joiners that are to work on ALICE GUIs. The workshop will be split in 3 main categories over the course of 2-3 days. It also gives an introduction to all ALICE projects (Bookkeeping, Control, InfoLogger, Quality Control, RCT).
+The first part of the workshop is hosted live while the other 2 parts are presented as tasks to do independently by the students.
 
 At the end of the workshop the students should have successfully built a web project based on [@aliceo2/web-ui](https://www.npmjs.com/package/@aliceo2/web-ui).
 
@@ -34,7 +35,7 @@ The following tutorials are considered to be useful to skim through or complete 
 # Local Setup
 
 ### NodeJS & NPM
-[NodeJS](https://nodejs.org/en/) required version `>=20`. </br>
+[NodeJS](https://nodejs.org/en/) required version `>=22`. </br>
 Downloading the package from nodejs website will install both NodeJS and NPM.
 
 Check installation was successful: 
